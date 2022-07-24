@@ -5,12 +5,13 @@ const Todos = ({todos , deleteTodo}) => {
             return(
                 <div className="collection-item" key={todo.id}>
                     <span>{todo.content} </span>
-                    <button onClick={}>Done</button>
+                    <div className="waves-effect waves-light red-text right" 
+                            onClick={() => {deleteTodo(todo.id)}}><i className="small material-icons">close</i> </div>
                 </div>
             )
         })
     ) : (
-         <p className = "center"> your finished your tasks! Nice </p>
+         <p className = "center message">You Completed your tasks, Nice! Add a New todo! </p>
     )
 
     return ( 
